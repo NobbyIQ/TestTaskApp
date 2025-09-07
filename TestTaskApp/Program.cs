@@ -6,8 +6,6 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddSingleton<IAdPlatformsService, AdPlatformService>();
 
 builder.Services.AddControllers();
-builder.Services.AddRazorPages();
-builder.Services.AddServerSideBlazor();
 
 builder.Services.AddCors(builder =>
 {
@@ -32,10 +30,6 @@ app.UseRouting();
 app.UseAuthorization();
 
 app.MapControllers();
-
-app.MapBlazorHub();
-
-app.MapRazorPages();
 
 app.Run();
 
